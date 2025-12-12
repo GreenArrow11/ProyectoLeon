@@ -1,7 +1,7 @@
 # 🦁 Simulación Inteligente: León vs. Impala
 **Materia:** Sistemas Inteligentes – Grupo 1754  
 **Institución:** UNAM • FES Acatlán  
-**Motor:** Unity 6 (C#)  
+**Alumnos** HERNANDEZ BARRAZA ALEJANDRO - PULIDO ZARIÑAN BRIAN JOB - FRAUSTO HERNANDEZ LUIS ANGEL 
 **Fecha:** Diciembre 2025  
 
 ## 📘 Descripción del Proyecto

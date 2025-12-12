@@ -1,0 +1,314 @@
+{
+  "sistema": {
+    "version": "1.0",
+    "fecha_creacion": "2024-01-15T10:30:00Z",
+    "descripcion": "Base de conocimiento inicial del sistema león-impala",
+    "autor": "Proyecto Final Sistemas Inteligentes 2026-I",
+    "profesor": "Javier Rosas Hernández"
+  },
+  "conocimiento": {
+    "reglas": [
+      {
+        "id": "regla_001",
+        "estado": {
+          "posicion": 3,
+          "distancia": "lejos",
+          "accion_impala": "beber",
+          "león_escondido": false
+        },
+        "accion": "avanzar",
+        "resultado": "éxito",
+        "contador": 12,
+        "tasa_exito": 0.92,
+        "ultima_actualizacion": "2024-01-15T10:31:00Z",
+        "historial": [
+          {"fecha": "2024-01-15T10:31:00Z", "resultado": "éxito"},
+          {"fecha": "2024-01-15T10:31:30Z", "resultado": "éxito"},
+          {"fecha": "2024-01-15T10:32:00Z", "resultado": "éxito"}
+        ]
+      },
+      {
+        "id": "regla_002",
+        "estado": {
+          "posicion": 3,
+          "distancia": "media",
+          "accion_impala": "ver_frente",
+          "león_escondido": false
+        },
+        "accion": "esconderse",
+        "resultado": "éxito",
+        "contador": 8,
+        "tasa_exito": 0.88,
+        "ultima_actualizacion": "2024-01-15T10:32:00Z",
+        "historial": [
+          {"fecha": "2024-01-15T10:32:00Z", "resultado": "éxito"},
+          {"fecha": "2024-01-15T10:32:30Z", "resultado": "éxito"}
+        ]
+      },
+      {
+        "id": "regla_003",
+        "estado": {
+          "posicion": 3,
+          "distancia": "cerca",
+          "accion_impala": "beber",
+          "león_escondido": true
+        },
+        "accion": "atacar",
+        "resultado": "éxito",
+        "contador": 5,
+        "tasa_exito": 1.0,
+        "ultima_actualizacion": "2024-01-15T10:33:00Z",
+        "historial": [
+          {"fecha": "2024-01-15T10:33:00Z", "resultado": "éxito"}
+        ]
+      },
+      {
+        "id": "regla_004",
+        "estado": {
+          "posicion": 1,
+          "distancia": "lejos",
+          "accion_impala": "beber",
+          "león_escondido": false
+        },
+        "accion": "avanzar",
+        "resultado": "éxito",
+        "contador": 7,
+        "tasa_exito": 0.86,
+        "ultima_actualizacion": "2024-01-15T10:34:00Z"
+      },
+      {
+        "id": "regla_005",
+        "estado": {
+          "posicion": [1, 2],
+          "distancia": "media",
+          "accion_impala": ["ver_izquierda", "ver_derecha"],
+          "león_escondido": false
+        },
+        "accion": "avanzar",
+        "resultado": "éxito",
+        "contador": 15,
+        "tasa_exito": 0.93,
+        "ultima_actualizacion": "2024-01-15T10:35:00Z",
+        "nota": "Regla generalizada: combina posiciones 1 y 2, y acciones ver_izquierda y ver_derecha"
+      },
+      {
+        "id": "regla_006",
+        "estado": {
+          "posicion": 4,
+          "distancia": "muy_cerca",
+          "accion_impala": "beber",
+          "león_escondido": false
+        },
+        "accion": "atacar",
+        "resultado": "fracaso",
+        "contador": 3,
+        "tasa_exito": 0.0,
+        "ultima_actualizacion": "2024-01-15T10:36:00Z",
+        "nota": "Ataque desde muy cerca sin esconderse: impala huye"
+      },
+      {
+        "id": "regla_007",
+        "estado": {
+          "posicion": 6,
+          "distancia": "cerca",
+          "accion_impala": "ver_frente",
+          "león_escondido": false
+        },
+        "accion": "avanzar",
+        "resultado": "fracaso",
+        "contador": 4,
+        "tasa_exito": 0.25,
+        "ultima_actualizacion": "2024-01-15T10:37:00Z",
+        "nota": "Avanzar cuando impala mira al frente: es visto"
+      },
+      {
+        "id": "regla_008",
+        "estado": {
+          "posicion": 7,
+          "distancia": "media",
+          "accion_impala": "beber",
+          "león_escondido": true
+        },
+        "accion": "avanzar",
+        "resultado": "éxito",
+        "contador": 6,
+        "tasa_exito": 0.83,
+        "ultima_actualizacion": "2024-01-15T10:38:00Z",
+        "nota": "Esconderse y avanzar cuando impala bebe: buena estrategia"
+      },
+      {
+        "id": "regla_009",
+        "estado": {
+          "posicion": 8,
+          "distancia": "lejos",
+          "accion_impala": "ver_izquierda",
+          "león_escondido": false
+        },
+        "accion": "avanzar",
+        "resultado": "éxito",
+        "contador": 9,
+        "tasa_exito": 0.89,
+        "ultima_actualizacion": "2024-01-15T10:39:00Z"
+      },
+      {
+        "id": "regla_010",
+        "estado": {
+          "posicion": [3, 4, 5],
+          "distancia": "cerca",
+          "accion_impala": "beber",
+          "león_escondido": true
+        },
+        "accion": "atacar",
+        "resultado": "éxito",
+        "contador": 18,
+        "tasa_exito": 0.94,
+        "ultima_actualizacion": "2024-01-15T10:40:00Z",
+        "nota": "Regla altamente generalizada: aplica a posiciones 3, 4, 5"
+      }
+    ],
+    "estadisticas": {
+      "total_reglas": 10,
+      "reglas_exito": 8,
+      "reglas_fracaso": 2,
+      "reglas_generalizadas": 2,
+      "consultas_totales": 156,
+      "aciertos": 132,
+      "tasa_acierto": 0.846,
+      "incursiones_totales": 500,
+      "incursiones_exito": 378,
+      "incursiones_fracaso": 122,
+      "tasa_exito_global": 0.756,
+      "ultima_actualizacion": "2024-01-15T10:40:00Z"
+    },
+    "configuracion": {
+      "ultimo_entrenamiento": {
+        "fecha": "2024-01-15T10:30:00Z",
+        "incursiones": 500,
+        "posiciones": [1, 2, 3, 4, 5, 6, 7, 8],
+        "modo_impala": "aleatorio",
+        "tasa_exito_final": 0.756
+      },
+      "parametros_aprendizaje": {
+        "probabilidad_exploracion": 0.3,
+        "umbral_generalizacion": 0.8,
+        "guardar_cada": 100,
+        "generalizar_cada": 200
+      }
+    },
+    "metadatos": {
+      "fecha_guardado": "2024-01-15T10:40:00Z",
+      "version_formato": "1.0",
+      "total_reglas": 10,
+      "reglas_por_resultado": {
+        "éxito": 8,
+        "fracaso": 2
+      },
+      "reglas_por_posicion": {
+        "1": 2,
+        "2": 1,
+        "3": 3,
+        "4": 2,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 1,
+        "generalizadas": 2
+      },
+      "reglas_por_accion": {
+        "avanzar": 7,
+        "esconderse": 1,
+        "atacar": 2
+      }
+    },
+    "historial": [
+      {
+        "fecha": "2024-01-15T09:00:00Z",
+        "evento": "Creación base de conocimiento",
+        "reglas": 0,
+        "incursiones": 0
+      },
+      {
+        "fecha": "2024-01-15T09:30:00Z",
+        "evento": "Primer entrenamiento (100 incursiones)",
+        "reglas": 15,
+        "incursiones": 100,
+        "tasa_exito": 0.45
+      },
+      {
+        "fecha": "2024-01-15T10:00:00Z",
+        "evento": "Segundo entrenamiento (200 incursiones)",
+        "reglas": 25,
+        "incursiones": 300,
+        "tasa_exito": 0.63
+      },
+      {
+        "fecha": "2024-01-15T10:30:00Z",
+        "evento": "Tercer entrenamiento (200 incursiones) y generalización",
+        "reglas": 10,
+        "incursiones": 500,
+        "tasa_exito": 0.756,
+        "generalizaciones": 5
+      }
+    ]
+  },
+  "ejemplos": {
+    "caceria_exitosa_posicion_3": {
+      "descripcion": "Estrategia exitosa aprendida para posición 3",
+      "secuencia": [
+        {
+          "tiempo": "T1",
+          "estado": {"posicion": 3, "distancia": "lejos", "accion_impala": "beber", "león_escondido": false},
+          "accion_león": "avanzar",
+          "resultado": "éxito"
+        },
+        {
+          "tiempo": "T2", 
+          "estado": {"posicion": 3, "distancia": "media", "accion_impala": "ver_frente", "león_escondido": false},
+          "accion_león": "esconderse",
+          "resultado": "éxito"
+        },
+        {
+          "tiempo": "T3",
+          "estado": {"posicion": 3, "distancia": "cerca", "accion_impala": "beber", "león_escondido": true},
+          "accion_león": "atacar",
+          "resultado": "éxito"
+        }
+      ],
+      "duracion": "3 pasos",
+      "confianza": 0.92
+    },
+    "caceria_fallida_comun": {
+      "descripcion": "Error común: avanzar cuando impala mira al frente",
+      "secuencia": [
+        {
+          "tiempo": "T1",
+          "estado": {"posicion": 6, "distancia": "cerca", "accion_impala": "ver_frente", "león_escondido": false},
+          "accion_león": "avanzar",
+          "resultado": "fracaso",
+          "razon": "Impala vio al león y huyó"
+        }
+      ],
+      "leccion": "No avanzar cuando el impala está mirando en tu dirección"
+    }
+  },
+  "notas": {
+    "reglas_mas_importantes": [
+      "regla_001: Avanzar cuando impala bebe y león está lejos",
+      "regla_002: Esconderse cuando impala mira al frente y león está a media distancia", 
+      "regla_010: Atacar cuando impala bebe, león está cerca y escondido (regla generalizada)"
+    ],
+    "patrones_aprendidos": [
+      "El impala no puede ver al león cuando éste está escondido",
+      "Es seguro avanzar cuando el impala está bebiendo agua",
+      "Debe esconderse cuando el impala está alerta (mirando al frente)",
+      "El ataque es más exitoso cuando se realiza estando escondido y cerca del impala",
+      "Avanzar cuando el impala mira a los lados es generalmente seguro"
+    ],
+    "recomendaciones": [
+      "Para nuevas posiciones, probar estrategias similares a posiciones conocidas",
+      "Mantener tasa de exploración del 30% durante entrenamiento",
+      "Generalizar cada 200 incursiones para optimizar conocimiento",
+      "Exportar conocimiento después de entrenamientos importantes"
+    ]
+  }
+}
